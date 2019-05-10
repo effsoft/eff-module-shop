@@ -5,7 +5,7 @@ use effsoft\eff\EffModel;
 
 class ItemForm extends EffModel{
 
-    public $title;
+    public $name;
     public $category;
     public $covers;
     public $description;
@@ -13,9 +13,9 @@ class ItemForm extends EffModel{
     public function rules()
     {
         return [
-            ['title','required'],
-            ['title','trim'],
-            ['title', 'string', 'max' => 100],
+            ['name','required'],
+            ['name','trim'],
+            ['name', 'string', 'max' => 100],
             ['category','required'],
             ['covers','safe'],
             ['description','safe'],

@@ -16,6 +16,7 @@ class SkuModel extends EffMysqlActiveRecord
         return [
             'id',
             'uid',
+            'shop_id',
             'item_id',
             'number',
             'parent_id',

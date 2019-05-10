@@ -15,7 +15,8 @@ class ItemModel extends EffActiveRecord{
         return [
             '_id',
             'uid',
-            'title',
+            'shop_id',
+            'name',
             'category',
             'covers',
             'description',
