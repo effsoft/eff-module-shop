@@ -2,18 +2,24 @@
 namespace effsoft\eff\module\shop\models;
 
 use effsoft\eff\EffActiveRecord;
+use effsoft\eff\EffMysqlActiveRecord;
 
-class ItemModel extends EffActiveRecord{
+class ItemModel extends EffMysqlActiveRecord {
 
-    public static function collectionName()
+//    public static function collectionName()
+//    {
+//        return 'Item';
+//    }
+
+    public static function tableName()
     {
-        return 'Item';
+        return 'item';
     }
 
     public function attributes()
     {
         return [
-            '_id',
+            'id',
             'uid',
             'shop_id',
             'name',
@@ -24,6 +30,14 @@ class ItemModel extends EffActiveRecord{
             'date_created',
             'date_updated',
         ];
+    }
+
+    public function getCoversArray(){
+        return json_decode($this->covers,true);
+    }
+
+    public function setCoversArray($value){
+        $this->logo = json_encode(reset($value));
     }
 
     public function beforeSave($insert)

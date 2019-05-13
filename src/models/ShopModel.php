@@ -4,6 +4,7 @@ namespace effsoft\eff\module\shop\models;
 
 use effsoft\eff\EffActiveRecord;
 use effsoft\eff\EffMysqlActiveRecord;
+use yii2tech\ar\softdelete\SoftDeleteBehavior;
 
 class ShopModel extends EffMysqlActiveRecord
 {

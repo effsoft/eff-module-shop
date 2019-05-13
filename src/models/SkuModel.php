@@ -28,4 +28,12 @@ class SkuModel extends EffMysqlActiveRecord
             'order',
         ];
     }
+
+    public function getCoversArray(){
+        return json_decode($this->covers,true);
+    }
+
+    public function setCoversArray($value){
+        $this->logo = json_encode(reset($value));
+    }
 }
